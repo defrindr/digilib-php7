@@ -68,7 +68,7 @@
 		$db->connect();
 		if(isset($tb)) {
 			$db->execute("INSERT INTO tb_buku VALUES
-				('','$judul','$kodePenerbit','$kodePengarang','$tahun','$edisi','$issn_isbn','$seri','$abstraksi','$kodeKategori','$date','$date','','$kodePetugas')");
+				('','$judul','$kodePenerbit','$kodePengarang','$tahun','$edisi','$issn_isbn','$seri','$abstraksi','$kodeKategori','$date','$date','$image','$kodePetugas')");
 			redirect("?page=daftar_buku","");
 		} else if(isset($tk)) {
 			$db->execute("INSERT INTO tb_kategori VALUES ('','$namaKategori')");
