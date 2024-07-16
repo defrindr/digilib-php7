@@ -68,28 +68,28 @@
 		$db->connect();
 		if(isset($tb)) {
 			$db->execute("INSERT INTO tb_buku VALUES
-				('','$judul','$kodePenerbit','$kodePengarang','$tahun','$edisi','$issn_isbn','$seri','$abstraksi','$kodeKategori','$date','$date','$image','$kodePetugas')");
+				(null,'$judul','$kodePenerbit','$kodePengarang','$tahun','$edisi','$issn_isbn','$seri','$abstraksi','$kodeKategori','$date','$date','$image','$kodePetugas')");
 			redirect("?page=daftar_buku","");
 		} else if(isset($tk)) {
-			$db->execute("INSERT INTO tb_kategori VALUES ('','$namaKategori')");
+			$db->execute("INSERT INTO tb_kategori VALUES (null,'$namaKategori')");
 			redirect("?page=daftar_kategori","");
 		} if(isset($tpn)) {
-			$db->execute("INSERT INTO tb_penerbit VALUES ('','$nama', '$alamat', '$telp', '$email')");
+			$db->execute("INSERT INTO tb_penerbit VALUES (null,'$nama', '$alamat', '$telp', '$email')");
 			redirect("?page=daftar_penerbit","");
 		} if(isset($tpg)) {
-			$db->execute("INSERT INTO tb_pengarang VALUES ('','$nama')");
+			$db->execute("INSERT INTO tb_pengarang VALUES (null,'$nama')");
 			redirect("?page=daftar_pengarang","");
 		} if(isset($tup)) {
 			$db->execute("INSERT INTO tb_petugas 
-				VALUES ('','$username','".md5($password)."','$nama','$email','$date','$date','tpl','$ttl','$alamat','')");
+				VALUES (null,'$username','".md5($password)."','$nama','$email','$date','$date','tpl','$ttl','$alamat','')");
 			redirect("?page=daftar_petugas","");
 		} if(isset($tud)) {
 			$db->execute("INSERT INTO tb_dosen
-				VALUES ('','$username','".md5($password)."','$nama','$email','$date','$date','tpl','$ttl','$alamat','')");
+				VALUES (null,'$username','".md5($password)."','$nama','$email','$date','$date','tpl','$ttl','$alamat','')");
 			redirect("?page=daftar_dosen","");
 		} if(isset($tum)) {
 			$db->execute("INSERT INTO tb_mahasiswa 
-				VALUES ('','$username','".md5($password)."','$nama','$email','$date','$date','tpl','$ttl','$alamat','')");
+				VALUES (null,'$username','".md5($password)."','$nama','$email','$date','$date','tpl','$ttl','$alamat','')");
 			redirect("?page=daftar_mahasiswa","");
 		}
 	}

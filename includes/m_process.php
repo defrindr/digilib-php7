@@ -13,10 +13,10 @@
 		$existId = $db->get_dataset();
 		count($existId);
 		if(count($existId) > 0) {
-			$db->execute("INSERT INTO tb_pinjamdetail VALUES ('','$kodePinjam','$kodeBuku') ");
+			$db->execute("INSERT INTO tb_pinjamdetail VALUES (null,'$kodePinjam','$kodeBuku') ");
 		} else {
 			$db->execute("INSERT INTO tb_pinjam VALUES ('$kodePinjam','','$kodePeminjam','$type','$tglPinjam','','','') ");
-			$db->execute("INSERT INTO tb_pinjamdetail VALUES ('','$kodePinjam','$kodeBuku') ");
+			$db->execute("INSERT INTO tb_pinjamdetail VALUES (null,'$kodePinjam','$kodeBuku') ");
 		}
 		redirect("index.php","");
 	}
